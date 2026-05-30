@@ -386,6 +386,33 @@ The rigid formula where AI acknowledges problems only to immediately dismiss the
 - "Despite its industrial and residential prosperity, Korattur faces challenges typical of urban areas."
 - "Despite their promising applications, pyroelectric materials face several challenges that must be addressed for broader adoption."
 
+## Engineering / Technical Jargon
+
+This category covers technical and professional writing: PR descriptions, commit messages, technical reports, and client-facing writing. Models reach for engineering slang here to sound senior. Many of these terms are real; keep one only when it is the precise word and plain phrasing would be ambiguous. Otherwise prefer the plain words a human would write.
+
+### Performative Engineering Slang
+
+Decorative engineering slang dropped in to sound senior. It performs seniority instead of adding information, and most of it has a plain-language equivalent (footgun = easy to misuse, blast radius = what this affects, red herring = a dead end). When normal phrasing carries the same meaning, use it.
+
+**Avoid patterns like:**
+- "this API is a footgun"
+- "the blast radius of the change is huge"
+- "we just monkeypatch it for now"
+- "that error turned out to be a red herring"
+- "ships day one"
+- "if that bites us later"
+
+### Technical Filler
+
+Throat-clearing intensifiers and filler that add length but no information to technical prose. "at a glance", "in-depth", "deep dive", "under the hood", "out of the box", and "stub" used as flavor rather than an actual stub. Cut them; the sentence means the same without them.
+
+**Avoid patterns like:**
+- "at a glance, the function does X"
+- "an in-depth look at the changes"
+- "let's take a deep dive into the module"
+- "here's what happens under the hood"
+- "this works out of the box"
+
 ---
 
 Remember: any of these patterns used once might be fine. The problem is when multiple tropes appear together or when a single trope is used repeatedly. Write like a human: varied, imperfect, specific.

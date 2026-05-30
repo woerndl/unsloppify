@@ -3,7 +3,7 @@
 ![unsloppify banner](.github/banner.webp)
 
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
-[![Tropes catalogued](https://img.shields.io/badge/tropes-39-purple)](references/tropes.md)
+[![Tropes catalogued](https://img.shields.io/badge/tropes-41-purple)](references/tropes.md)
 [![Claude Code compatible](https://img.shields.io/badge/Claude%20Code-compatible-orange?logo=anthropic&logoColor=white)](https://claude.com/claude-code)
 [![Codex compatible](https://img.shields.io/badge/Codex-compatible-black?logo=openai&logoColor=white)](https://github.com/openai/codex)
 
@@ -37,7 +37,7 @@ Then start a fresh Claude Code session and ask it to draft something. `unsloppif
 
 ## What it covers
 
-Six categories, taken from @ossa-ma's gist plus additions from the gist comments:
+Seven categories, taken from @ossa-ma's gist plus additions from the gist comments:
 
 - Word choice: magic adverbs, "delve" family, ornate nouns, "serves as" dodge, gravitas words
 - Sentence structure: negative parallelism, "Not X. Not Y. Just Z.", rhetorical self-Q&A, anaphora, tricolons, "it's worth noting", superficial -ing tails, false ranges
@@ -45,6 +45,7 @@ Six categories, taken from @ossa-ma's gist plus additions from the gist comments
 - Tone: "here's the kicker", "think of it as", "imagine a world", false vulnerability, "the truth is simple", stakes inflation, "let's break this down", vague attributions, invented concept labels, compliment sandwich, false exclusivity, clichéd idioms, fake casual quotes
 - Formatting: em-dash addiction, bold-first bullets, unicode decoration
 - Composition: fractal summaries, dead metaphor, historical analogy stacking, one-point dilution, content duplication, signposted conclusion, "despite its challenges"
+- Engineering / technical jargon: performative slang (footgun, blast radius, monkeypatch, red herring), technical filler (at a glance, in-depth, deep dive)
 
 Full examples for each are in [`references/tropes.md`](references/tropes.md).
 
