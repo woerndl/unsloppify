@@ -392,7 +392,7 @@ This category covers technical and professional writing: PR descriptions, commit
 
 ### Performative Engineering Slang
 
-Decorative engineering slang dropped in to sound senior. It performs seniority instead of adding information, and most of it has a plain-language equivalent (footgun = easy to misuse, blast radius = what this affects, red herring = a dead end). When normal phrasing carries the same meaning, use it.
+Decorative engineering slang dropped in to sound senior. It performs seniority instead of adding information, and most of it has a plain-language equivalent (footgun = easy to misuse, blast radius = what this affects, red herring = a dead end, the knob = the setting, smoke test = a quick check, when X lands = when X is released). When normal phrasing carries the same meaning, use it.
 
 **Avoid patterns like:**
 - "this API is a footgun"
@@ -401,6 +401,21 @@ Decorative engineering slang dropped in to sound senior. It performs seniority i
 - "that error turned out to be a red herring"
 - "ships day one"
 - "if that bites us later"
+- "just flip the knob"
+- "let's run a quick smoke test"
+- "when the feature lands"
+
+### Fallback Diagnoses
+
+Real diagnostic terms reached for as a generic conclusion when the actual mechanism has not been identified. "Race condition", "debounce", "memory leak", "deadlock" sound precise, so models fall back on them to label any problem or propose any fix. They are right only when you can name the specific cause — the two operations that interleave, the exact rapid event being coalesced. Otherwise describe what actually happens.
+
+**Avoid patterns like:**
+- "this is probably a race condition" (no two racing operations named)
+- "we should just debounce it" (reflex fix for any rapid-fire behavior)
+- "looks like a memory leak somewhere"
+- "must be some kind of deadlock"
+
+**Acceptable use:** ONLY when you can point to the specific mechanism — the operations that interleave, the event being coalesced — not as a catch-all label for "something is wrong."
 
 ### Technical Filler
 

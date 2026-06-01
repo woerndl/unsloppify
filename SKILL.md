@@ -15,7 +15,7 @@ When drafting or revising prose, load `references/tropes.md` and check the outpu
 - **Tone:** "here's the kicker", "think of it as", "imagine a world", false vulnerability, "the truth is simple", stakes inflation, "let's break this down", vague attributions, invented concept labels, compliment sandwich, false exclusivity, clichéd idioms, fake casual quotes
 - **Formatting:** em-dash addiction, bold-first bullets, unicode decoration (→, smart quotes)
 - **Composition:** fractal summaries, dead metaphor, historical analogy stacking, one-point dilution, content duplication, signposted conclusion, "despite its challenges"
-- **Engineering / technical jargon (PRs, commits, reports, offerings):** performative slang (footgun, blast radius, monkeypatch, red herring, "ships day one", "if that bites"), technical filler ("at a glance", "in-depth", "deep dive", "under the hood")
+- **Engineering / technical jargon (PRs, commits, reports, offerings):** performative slang (footgun, blast radius, monkeypatch, red herring, "ships day one", "the knob", "smoke test", "when X lands"), fallback diagnoses (race condition / debounce used as generic labels), technical filler ("at a glance", "in-depth", "deep dive", "under the hood")
 
 ## How to use
 
