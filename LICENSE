@@ -22,8 +22,5 @@ SOFTWARE.
 
 ---
 
-Note: the trope catalogue in `references/tropes.md` is adapted with attribution
-from @ossa-ma's gist (https://gist.github.com/ossa-ma/f3baa9d25154c33095e22272c631f5a1)
-and the tropes.fyi site (https://tropes.fyi) by ossama.is. The original gist
-has no explicit license; please credit @ossa-ma when redistributing the
-catalogue itself.
+Note: some entries in `references/patterns.md` draw on earlier collections,
+credited in the per-entry `Source:` lines and the README sources table.

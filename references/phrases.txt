@@ -1,0 +1,396 @@
+# unsloppify phrase list. One POSIX extended regular expression per line.
+# Matching is case-insensitive because the scanner passes -i. Lines that start
+# with # are comments, and a comment before each group names the failure mode.
+# Patterns avoid \b so they work with BSD grep, so multiword literals are
+# preferred over bare words.
+# mode: importance-inflation
+(cannot|can't) be overstated
+can't be emphasized enough
+(has|have) never been more important
+more important than ever
+the stakes have never been higher
+at an inflection point
+at a critical juncture
+in an increasingly
+it('s| is) (important|worth|crucial) to (note|remember|understand|consider)
+it should be noted
+needless to say
+it goes without saying
+that being said
+one thing is clear
+begs the question
+plays a (vital|pivotal|crucial|key) role
+a (wide range|variety|myriad|plethora|wealth) of
+in order to
+due to the fact that
+has the potential to
+when it comes to
+stands as a testament
+a testament to
+serves as a reminder
+enduring legacy
+indelible mark
+watershed moment
+cornerstone of
+widely regarded as
+has established itself as
+has emerged as a
+rich cultural heritage
+the (numbers|results|data) speak(s)? for (themselves|itself)
+tells a story
+paints a (clear )?picture
+speaks volumes
+sends a clear message
+, (highlighting|underscoring|emphasizing|showcasing|reflecting|cementing|solidifying) (its|the|their|his|her) [a-z]
+paving the way
+marking a (significant|pivotal)
+fostering a sense of
+shaping the future
+the (only|single) (way|real|most important)
+make no mistake
+there('s| is) no denying
+# mode: manufactured-drama
+(it|this|that) is(n't| not) (just|only|merely|simply|about)
+(it|this|that)'s not (just|only|merely|simply|about)
+isn't (just|only|about|merely)
+it's less about
+what matters isn't
+no [a-z]+[.,] no [a-z]+[.,] (no|just) [a-z]+
+not [a-z]+\. not [a-z]+\. just
+the (result|catch|reason|kicker|problem|best part|bottom line)\?
+why does this matter
+why should you care
+what if i told you
+full stop\.
+let that sink in
+read that again
+here('s| is) the (thing|kicker|catch|deal)
+here's where it gets
+that's the beauty of
+the real secret
+what this really means
+the truth is[,:]
+the reality is[,:]
+to be honest
+let me be honest
+spoiler alert
+plot twist
+pro tip
+hot take
+unpopular opinion
+the key insight
+(nobody|no one) (talks about|tells you)
+what most people (miss|don't know|get wrong)
+the (dirty|open) secret
+the uncomfortable truth
+the elephant in the room
+the hidden cost
+the silent killer
+doesn't get enough attention
+something (shifted|clicked)
+everything changed
+chang(ed|es) everything
+that's when i realized
+then it hit me
+a light ?bulb went off
+the penny dropped
+changed the game
+flipped the script
+shifted the paradigm
+the (catch|kicker|upshot|tradeoff|trick|downside|bottom line|takeaway|result|fix|payoff):
+the (answer|secret|key|trick|truth|problem|solution|takeaway|lesson|difference|reason) (is|was|isn't|remains)[[:space:]]*:
+the reality is simpler
+history is unambiguous
+the real story is
+# mode: performative-register
+delve|delving
+tapestry
+multifaceted
+seamless
+meticulous
+burgeoning
+ubiquitous
+plethora
+myriad
+holistic
+synergy
+state-of-the-art
+best-in-class
+supercharge
+unleash
+democratiz
+game-?changer
+paradigm shift
+double-edged sword
+tip of the iceberg
+perfect storm
+tipping point
+at the forefront
+sets the stage
+only time will tell
+move(s)? the needle
+unlock(s|ing)? new (value|potential|possibilities|capabilities|use cases)
+at the end of the day
+sheds light
+strikes a balance
+at the intersection of
+smoking gun
+foot-?gun
+blast radius
+load-?bearing
+smoke (test|cases)
+cut-?over
+gate(d)? (off|on|behind)
+when (it|this|that) (lands|bites)
+once (it|this|that) lands
+ships day one
+belt(-| )and(-| )suspenders
+battle-tested
+the knob
+drift seam
+utiliz(e|es|ed|ing)
+facilitat(e|es|ed|ing)
+commence
+elucidate
+delineate
+serves as a
+serving as the
+stands as a
+functions as a
+operates as a
+acts as a
+represents a
+constitutes a
+boasts a
+earns its (keep|place)
+pays dividends
+pays for itself
+pulls its weight
+punches above its weight
+heavy lifting
+speaks for itself
+deserves (mention|a closer look)
+hinges on
+is the move
+the (play|move) here
+what (really|actually) matters
+really lands
+nestled
+in the heart of
+at the heart of
+vibrant
+breathtaking
+bustling
+picturesque
+hidden gem
+must-visit
+world-class
+second to none
+a (hub|beacon|treasure trove) (for|of)
+a shining example
+a masterclass in
+gateway to
+thoughtfully designed
+nascent
+fledgling
+incubat(e|ing)
+in its infancy
+flywheel
+competitive moat
+north(-| )star metric
+our north star
+first-mover advantage
+think of it (as|like)
+it might sound obvious
+this may seem
+at first glance
+on the surface,? (it|this|they|these|the)
+warrants further investigation
+sheds new light
+garnered significant attention
+with the advent of
+in recent years
+ever-evolving
+resonat(e|es|ing)
+# mode: false-precision
+experts (argue|say|suggest|agree|believe)
+(some|many|several) experts
+studies (show|suggest|indicate|have shown)
+research (shows|suggests|indicates)
+(several|numerous) studies
+a growing body of
+the (evidence|data) suggests
+industry reports
+observers have noted
+critics argue
+analysts predict
+many believe
+has been described as
+it is widely (regarded|considered|believed)
+race condition
+memory leak
+deadlock
+falls out naturally
+falls straight out of
+emerg(es|ing) (naturally|organically)
+arises naturally
+flows naturally
+a natural consequence
+follows naturally
+while specific details are limited
+not widely documented
+based on available information
+maintains a low profile
+(each|every|both) perspective(s)? (has|have) merit
+a balanced approach
+nuanced (understanding|approach)
+the answer is not straightforward
+there is no simple answer
+this is a complex issue
+depends on various factors
+case-by-case basis
+spanning everything from
+# mode: template-filling
+in today's (fast-paced|digital|rapidly|ever-)
+in the realm of
+in an era (where|of)
+in a world where
+picture this
+imagine a world
+have you ever wondered
+embark(ing)? on a journey
+gone are the days
+whether you're a
+chances are
+you're not alone
+look no further
+without further ado
+we live in a world
+before we dive in
+in (conclusion|summary|closing)
+to (summarize|sum up|conclude|recap)
+all in all
+when all is said and done
+in the final analysis
+final (thoughts|word)
+wrapping up
+putting it all together
+the big picture
+moreover
+furthermore
+consequently
+subsequently
+nevertheless
+conversely
+what's more
+that is to say
+firstly, secondly
+firstly
+secondly
+thirdly
+the (first|second|third) (takeaway|lesson|reason|thing to note)
+below you'll find
+here's (a breakdown|an overview|everything you need|what you need to know)
+the following sections
+this guide will walk you through
+what (you'll learn|we'll cover|to expect)
+deep dive
+under the hood
+demystifying
+why (it|this) matters
+a closer look
+the ultimate guide
+everything you need to know
+mastering [a-z]
+the (magic|future|art) of
+(three|four|five) (pillars|principles|tenets|cornerstones|levers|key)
+here are the (three|four|five)
+there are (three|four|five) (reasons|ways|things)
+at its (core|heart)
+the key here is
+let's (unpack|break this down|dive in|explore|take a closer look)
+let me explain
+this is where [^.]{0,40} comes in
+this matters because
+key takeaway
+quick (recap|overview)
+to recap
+in other words
+simply put
+put simply
+to put it (another way|simply)
+said differently
+in plain english
+in simpler terms
+ask yourself
+the (litmus|acid) test
+the question to ask
+think about it
+despite (its|these) (challenges|limitations)
+while challenges remain
+challenges notwithstanding
+is not without its challenges
+faces several challenges
+continues to (thrive|evolve|shape)
+poised for growth
+the future looks bright
+exciting times
+one thing is certain
+what remains clear
+remains to be seen
+positions it as
+future (outlook|prospects)
+looking ahead
+step in the right direction
+\[your name\]
+\[insert
+insert [a-z]+ here
+# mode: process-leakage
+i hope this (helps|was helpful)
+feel free to (ask|reach out)
+don't hesitate to
+let me know if you
+happy to help
+i'd be happy to
+happy coding
+best of luck
+great question
+excellent question
+i'm glad you asked
+absolutely!
+certainly!
+of course!
+you're absolutely right
+you make an excellent point
+i couldn't agree more
+i assure you
+let me think step by step
+breaking this down
+here's my thought process
+working through this logically
+to approach this systematically
+as (mentioned|noted|discussed) (above|earlier)
+as previously mentioned
+as we (saw|'ll see)
+recall that
+as i (mentioned|said)
+now also handles
+per the plan
+per review feedback
+as an ai (language model)?
+as a large language model
+as of my (last knowledge update|knowledge cutoff)
+based on my training data
+i don't have access to real-time
+# mode: mechanical (house bans)
+—
+# human-triage-only: arrows are allowed as deliberate shorthand, so a hit
+# means check whether the arrow does work or decorates. Code spans match on
+# every arrow. Exclude fenced and indented code before scanning and review
+# the rest by hand.
+→|⇒
+[·•]
+typed forward
+persistence contract
+hangs off
+fails (closed|open)
