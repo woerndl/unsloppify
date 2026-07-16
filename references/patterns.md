@@ -39,17 +39,23 @@ Source: ossa-ma
 Mode: importance-inflation (false-precision)
 Status: current
 Uniqueness and certainty claims no one checked. If the claim were true it
-would survive being stated plainly with evidence.
-Phrases: the only way to, the only real solution, the single most important, the most important thing is, above all else, more than anything else, there is no better, make no mistake, there's no denying
-Acceptable: a true, shown uniqueness claim (a proof that one method terminates)
-Source: mastra
+would survive being stated plainly with evidence. Includes dramatic
+absolutes, "cannot", "never", "always" where plain "not" or "does not"
+states the fact ("this approach cannot scale" for "this approach does not
+scale"). The scanner lists the fixed constructions below and surfaces bare
+"cannot" and "never" in its broad-triage group, where most hits are
+legitimate. Each broad hit takes the plain-not test per instance instead of
+counting as a finding.
+Phrases: the only way to, the only real solution, the only way forward, the single most important, the most important thing is, above all else, above everything else, more than anything else, there is no better, there is no other way, there can be no doubt, make no mistake, there's no denying, simply cannot, cannot afford to, can't go wrong, will never be the same
+Acceptable: a true, shown uniqueness claim (a proof that one method terminates), a literal impossibility stated as fact ("a dropped column cannot be recovered without a backup")
+Source: mastra, unslop
 
 ### Urgency and stakes inflation
 Mode: importance-inflation
 Status: current
 Manufactured moment-of-history framing. The test: could this sentence have
 been written about any topic in any year?
-Phrases: cannot be overstated, can't be emphasized enough, more important than ever, has never been more important, the stakes have never been higher, at a crossroads, at an inflection point, at a critical juncture, in an increasingly complex world, reshape how we think about, define the next era
+Phrases: cannot be overstated, cannot be understated, can't be emphasized enough, more important than ever, more critical than ever, has never been more important, has never been easier, the stakes have never been higher, the stakes are higher than ever, the stakes couldn't be higher, at a crossroads, at an inflection point, at a critical juncture, at a pivotal moment, at a defining moment, in an increasingly complex world, reshape how we think about, define the next era
 Acceptable: stakes that are real, named, and quantified
 Source: mastra, ossa-ma
 
@@ -265,7 +271,7 @@ Jargon used as flavor rather than as the precise term. The words have
 meanings, and slop uses them where a plain phrase means the same. Repetition
 makes the register annoying, but it does not invalidate a term that fits.
 The pet peeves here are an owner house rule and ship in the ban list.
-Phrases: footgun, blast radius, load-bearing, smoke test, smoke cases, cutover, cut-over, gate off, gated on (as flavor), when it lands, once it lands, when it bites, if it bites, ships day one, the knob, flip the knob, hangs off (N knobs), fails closed (as flavor), fails open (as flavor), typed forward, persistence contract, belt and suspenders, belt-and-suspenders, battle-tested, production-ready (as flavor), wire up (as flavor), the unlock, the shape of the problem, center of gravity, drift seam, substrate, wedge (metaphor)
+Phrases: footgun, blast radius, load-bearing, smoke test, smoke cases, cutover, cut-over, handoff, hand-off, gate off, gated on (as flavor), when it lands, once it lands, when it bites, if it bites, ships day one, the knob, flip the knob, hangs off (N knobs), fails closed (as flavor), fails open (as flavor), typed forward, persistence contract, belt and suspenders, belt-and-suspenders, battle-tested, production-ready (as flavor), wire up (as flavor), the unlock, the shape of the problem, center of gravity, drift seam, substrate, wedge (metaphor)
 Example: "this API is a footgun" becomes "this API is easy to misuse"
 Acceptable: the precise term where plain phrasing is ambiguous. A smoke test suite, a database cutover, a release gate, and a feature gate are the terms doing real work. "load-bearing" only for a structural dependency the reader can point to. The bans carry the escape hatch: banned unless the context genuinely requires the term.
 Source: ossa-ma, hn, mastra, unslop
@@ -284,9 +290,12 @@ Status: current
 Ordinary verbs in figurative senses that stack into a register: things land,
 sit, hold, fall, cast, ride, and run instead of happening. Each verb is fine
 literally. The figurative pileup is the tell.
-Phrases: shape only, gated on the complement: lands in main, once the feature lands, carries weight, casts doubt, draws a distinction, falls short, falls by the wayside, holds true, holds promise, lends credence, rides on, runs deep, runs counter to, sits at the intersection of, sits with, strikes a chord
+Phrases: shape only, gated on the complement: lands in main, once the feature lands, lands silently, carries weight, casts doubt, draws a distinction, falls short, falls by the wayside, holds true, holds promise, lends credence, rides on, runs deep, runs counter to, sits at the intersection of, sits with, sits above (for "is above"), strikes a chord
 Example: "the PR lands in main" becomes "the PR is merged"
 Acceptable: literal senses (a plane lands, prices fall, tests run)
+Scanner: the fixed verb-complement pairs match directly, and bare "land",
+"ship", and "sits" surface in the broad-triage group for the per-instance
+literal-or-figurative call.
 Source: mastra, hn
 
 ### Colloquial assessments

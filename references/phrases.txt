@@ -2,27 +2,57 @@
 # Matching is case-insensitive because the scanner passes -i. Lines that start
 # with # are comments, and a comment before each group names the failure mode.
 # Patterns avoid \b so they work with BSD grep, so multiword literals are
-# preferred over bare words.
+# preferred over bare words, and single words that need boundaries use
+# (^|[^A-Za-z]) and ($|[^A-Za-z]) groups.
 # mode: importance-inflation
-(cannot|can't) be overstated
+(cannot|can't) be (overstated|understated)
 can't be emphasized enough
-(has|have) never been more important
-more important than ever
-the stakes have never been higher
+(has|have) never been (easier|more)
+more (important|critical|relevant|urgent|essential|vital|pressing) than ever
+the stakes (have never been higher|are higher than ever|couldn't be higher)
+(cannot|can't) afford to
+simply (cannot|can't)
+(cannot|can't) go wrong
+never be the same
+there can be no doubt
+there is no other way
+above (all|everything) else
+at a crossroads
 at an inflection point
 at a critical juncture
+at a (pivotal|defining) moment
 in an increasingly
-it('s| is) (important|worth|crucial) to (note|remember|understand|consider)
+it('s| is) (important|worth|crucial|essential|critical|vital|necessary) to (note|remember|understand|consider|recognize|acknowledge|emphasize|highlight|mention)
+it('s| is) worth (noting|mentioning|pointing out|emphasizing|highlighting|remembering)
+it bears mentioning
 it should be noted
 needless to say
 it goes without saying
 that being said
-one thing is clear
+having said that
+with that said
+(generally|broadly) speaking
+by and large
+all things considered
+one thing is (clear|certain|for sure|for certain)
+this much is (clear|certain)
 begs the question
+raises (important|serious) questions
+(forces|invites|prompts) us to (ask|consider|reflect)
+calls into question
+reminds us (that|of)
+as (you|one) might expect
 plays a (vital|pivotal|crucial|key) role
-a (wide range|variety|myriad|plethora|wealth) of
+a (wide range|broad range|variety|myriad|plethora|wealth|multitude|abundance) of
+innumerable
 in order to
+for the purpose of
+with the aim of
+so as to
 due to the fact that
+(owing to|in light of) the fact
+it is (clear|evident|apparent|obvious) that
+it can be (seen|observed) that
 has the potential to
 when it comes to
 stands as a testament
@@ -41,44 +71,71 @@ tells a story
 paints a (clear )?picture
 speaks volumes
 sends a clear message
-, (highlighting|underscoring|emphasizing|showcasing|reflecting|cementing|solidifying) (its|the|their|his|her) [a-z]
+, (highlighting|underscoring|emphasizing|showcasing|reflecting|cementing|solidifying|demonstrating|reinforcing|symbolizing|signaling) (its|the|their|his|her) [a-z]
+ensuring a (seamless|smooth)
 paving the way
+la(ys|id) the groundwork
 marking a (significant|pivotal)
-fostering a sense of
+marks a (pivotal|significant|crucial|key|turning|critical|major|defining|new)
+fostering a (sense|culture) of
 shaping the future
 the (only|single) (way|real|most important)
 make no mistake
 there('s| is) no denying
+(this|it|that) (may|might) (seem|sound|appear)
+at first glance
+on the surface,? (it|this|they|these|the)
+to be fair,
+admittedly,
+granted,
+i know this (seems|sounds)
 # mode: manufactured-drama
 (it|this|that) is(n't| not) (just|only|merely|simply|about)
 (it|this|that)'s not (just|only|merely|simply|about)
 isn't (just|only|about|merely)
+(it|this) is more than just
 it's less about
 what matters isn't
+isn't the point
+not because [a-z][^,.]{2,40},? but because
 no [a-z]+[.,] no [a-z]+[.,] (no|just) [a-z]+
 not [a-z]+\. not [a-z]+\. just
-the (result|catch|reason|kicker|problem|best part|bottom line)\?
+the (result|outcome|answer|solution|catch|problem|issue|reason|reality|truth|worst part|best part|irony|twist|takeaway|lesson|upside|downside|trade-?off|difference|impact|cost|benefit|risk|payoff|kicker|point|verdict|caveat|key|secret|fix|goal|short answer|bottom line|big picture)\?
 why does this matter
 why should you care
 what if i told you
 full stop\.
 let that sink in
 read that again
-here('s| is) the (thing|kicker|catch|deal)
+let me say that again
+here('s| is) the (thing|kicker|catch|deal|truth|reality|secret|test)
 here's where it gets
+this is where (it|things) gets? interesting
+here('s| is) why (this|that|it) matters
 that's the beauty of
+that('s| is) the (power|magic|essence|heart|crux) of
+and that('s| is) (exactly|precisely) (what|why|how)
 the real secret
 what this really means
+the (key|core|central|real|true|fundamental) (insight|point|takeaway|lesson|idea) is
+the (takeaway|lesson|point|insight) here is
 the truth is[,:]
 the reality is[,:]
+the fact is[,:]
+the (simple|hard|plain) truth is
 to be honest
 let me be honest
+let('s| me| us) be (clear|honest|direct|frank|real)
+rest assured
+have no doubt
 spoiler alert
 plot twist
+fun fact
 pro tip
 hot take
 unpopular opinion
 the key insight
+think about (it|that) for a (moment|second)
 (nobody|no one) (talks about|tells you)
 what most people (miss|don't know|get wrong)
 the (dirty|open) secret
@@ -87,21 +144,38 @@ the elephant in the room
 the hidden cost
 the silent killer
 doesn't get enough attention
-something (shifted|clicked)
-everything changed
+something (shifted|clicked|changed|snapped)
+everything (changed|shifted|clicked)
 chang(ed|es) everything
 that's when i realized
 then it hit me
 a light ?bulb went off
 the penny dropped
 changed the game
+changed the landscape
 flipped the script
 shifted the paradigm
-the (catch|kicker|upshot|tradeoff|trick|downside|bottom line|takeaway|result|fix|payoff):
+moved? the goalposts
+rewr(ote|ites|iting) the (rules|playbook)
+ma(kes|de) all the difference
+a wake-up call
+fell into place
+it all (came together|made sense)
+(is|was) no (accident|coincidence)
+and (it|that) (shows|works|matters)\.
+and that('s| is) (okay|fine|enough|it|the point)\.
+nothing (is|was) (accidental|random|hidden|wasted)
+everything (is|was) (intentional|deliberate|connected)
+, nothing (more|else|fancy|special|clever)
+the (catch|kicker|upshot|tradeoff|trade-off|trick|downside|flip side|bottom line|takeaway|result|fix|payoff|price|cost|moral|lesson|point|pitch):
 the (answer|secret|key|trick|truth|problem|solution|takeaway|lesson|difference|reason) (is|was|isn't|remains)[[:space:]]*:
 the reality is simpler
 history is unambiguous
 the real story is
+the jury is still out
+whether (we|you) like it or not
+\*(is|are|was|were|not)\*
+_(is|are|was|were|not)_
 # mode: performative-register
 delve|delving
 tapestry
@@ -114,35 +188,87 @@ plethora
 myriad
 holistic
 synergy
+robust
+pivotal
+intricate|intricacies
+groundbreaking
+transformative
+unparalleled
+unprecedented
+streamlin(e|es|ed|ing)
+bolster
+underpin
+reimagin
+catalyst|catalyz
+granular
+actionable
+impactful
+empower
+proactive
+sophisticated
+remarkabl(e|y)
+profound(ly)?
+versatile
+aforementioned
+encompass
+grappl(e|es|ing) with
+palpabl(e|y)
+leverag(e|es|ed|ing)
+harness(es|ed|ing)
+spearhead
+showcas(e|es|ed|ing)
+navigat(e|es|ing) the (complexities|landscape|challenges|nuances|world)
+ascertain
+endeavo(r|u)r
+(conceptual|operational|incentiv)iz
+revolutioniz
 state-of-the-art
 best-in-class
+cutting-edge
+next-generation
 supercharge
 unleash
 democratiz
 game-?changer
 paradigm shift
+sea change
+slippery slope
 double-edged sword
 tip of the iceberg
 perfect storm
 tipping point
+delicate (balance|interplay)
+(intricate|dynamic) interplay
+complex and multifaceted
+deeply rooted
+(a|the) hallmark of
 at the forefront
 sets the stage
+takes? center stage
+took center stage
 only time will tell
 move(s)? the needle
+nudg(e|es|ed) the needle
 unlock(s|ing)? new (value|potential|possibilities|capabilities|use cases)
 at the end of the day
 sheds light
 strikes a balance
 at the intersection of
+threads? to pull
+(before|after) [a-z ]{1,40}(hardens|solidifies|ossifies)
 smoking gun
 foot-?gun
 blast radius
 load-?bearing
 smoke (test|cases)
 cut-?over
+hand(-| )?off(s)?($|[^A-Za-z])
 gate(d)? (off|on|behind)
 when (it|this|that) (lands|bites)
 once (it|this|that) lands
+(whenever|before|after|until) (it|this|that|the [a-z]+) land(s|ed)
+land(s|ed)? (silently|quietly|cleanly|flat|well|badly)
+(really|actually|just|finally) land(s|ed)
 ships day one
 belt(-| )and(-| )suspenders
 battle-tested
@@ -153,28 +279,75 @@ facilitat(e|es|ed|ing)
 commence
 elucidate
 delineate
-serves as a
-serving as the
-stands as a
+serv(es|ed|ing) as (a|an|the)
+st(ands|ood) as (a|an|the)
 functions as a
 operates as a
 acts as a
 represents a
 constitutes a
 boasts a
-earns its (keep|place)
+features a (wide|rich|diverse|unique|vibrant)
+offers a (unique|wide|comprehensive|diverse)
+earn(s|ed)? (its|their|a|an|the) (keep|place|spot|mention|nod|closer look|second look)
+more than (earns|pays for)
 pays dividends
 pays for itself
+pays? its rent
 pulls its weight
+carries its weight
 punches above its weight
 heavy lifting
+does the (legwork|real work|hard work|actual work)
+stands? on its own
+justif(y|ies|ying) its existence
 speaks for itself
-deserves (mention|a closer look)
+deserves? (mention|attention|scrutiny|credit|consideration|unpacking|revisiting|a (closer|second) look|a moment)
+claims? (the |its )?(top spot|crown|throne|title|pride of place|center stage)
+stake(s|d)? (a|its|out a) claim
+on its best behavio(r|ur)
+behav(es|ing) itself
+cares deeply
+deliver(s|ed)? on (its|the|that|every) promise
+hangs? in the balance
+settl(es|ed) the (question|debate|matter)
+put(s)? the (question|debate|matter) to (rest|bed)
 hinges on
 is the move
 the (play|move) here
-what (really|actually) matters
+the (right|smart|obvious) move
+what (really|actually|truly|genuinely) matters
+what matters most
+all that (really )?matters
+the only thing that (really )?matters
 really lands
+run(s|ning)? (deep|counter to|afoul of|roughshod|the gamut|the risk of|dry|on fumes|out of runway)
+r(uns?|an) (its|their) course
+hit the ground running
+(fall(s|ing)?|fell) (short|flat|apart|behind|victim|prey)
+fall(s|ing)? (by the wayside|through the cracks|on deaf ears|into place)
+fall(s|ing)? (squarely |neatly )?(within|under|outside) the (scope|purview|remit|umbrella)
+sit(s|ting)? (alongside|atop|at odds|in tension|in limbo|on the fence|somewhere between)
+just sit(s|ting)? there
+(holds?|held|holding) (true|water|sway|court|its own|the key to|the line)
+hold(s|ing)? (great |real |enormous |immense )?(promise|potential)
+holds? up under scrutiny
+rid(es|ing) (the (wave|momentum)|shotgun|high|on the coattails)
+(everything|it all) rides on
+along for the ride
+dr(aws?|ew|awing) (inspiration from|to a close)
+dr(aws?|ew|awing) a (clear |sharp )?(distinction|parallel|contrast)
+str(ikes?|uck|iking) a (chord|nerve|note|tone)
+str(ikes?|uck|iking) gold
+strike while the iron is hot
+cast(s|ing)? (doubt|a shadow|a long shadow|a pall|aspersions|a wide net|aside)
+cast(s|ing)? (new )?light on
+in a (new|different|positive|negative) light
+carr(y|ies|ied|ying) (real |extra |significant |considerable |more |less |equal |the same )?(weight|significance|baggage|connotations)
+carr(y|ies|ied|ying) the (day|torch|mantle|banner)
+lend(s|ing)? (itself|themselves)
+l(ends?|ent) (credence|credibility|weight|gravitas|legitimacy|depth|texture)
+lends? an air of
 nestled
 in the heart of
 at the heart of
@@ -194,33 +367,38 @@ thoughtfully designed
 nascent
 fledgling
 incubat(e|ing)
+gestat(e|es|ed|ing|ion)
+embryonic
+cultivat(e|es|ed|ing)
+nurtur(e|es|ed|ing)
 in its infancy
 flywheel
-competitive moat
+(competitive|defensible|economic|data) moat
+moats? (around|against)
+network effects?
 north(-| )star metric
 our north star
 first-mover advantage
+land[- ]grab
 think of it (as|like)
 it might sound obvious
 this may seem
-at first glance
-on the surface,? (it|this|they|these|the)
 warrants further investigation
 sheds new light
 garnered significant attention
 with the advent of
 in recent years
 ever-evolving
-resonat(e|es|ing)
+resonat(e|es|ed|ing)
 # mode: false-precision
-experts (argue|say|suggest|agree|believe)
-(some|many|several) experts
+experts (argue|say|suggest|agree|believe|warn|note|predict|contend|recommend)
+(some|many|several|numerous) (experts|analysts|observers|researchers)
 studies (show|suggest|indicate|have shown)
 research (shows|suggests|indicates)
 (several|numerous) studies
-a growing body of
+a growing (body|number) of
 the (evidence|data) suggests
-industry reports
+industry (reports|observers|analysts|experts)
 observers have noted
 critics argue
 analysts predict
@@ -231,33 +409,55 @@ race condition
 memory leak
 deadlock
 falls out naturally
-falls straight out of
+falls? (straight|right|cleanly|directly|neatly) out of
 emerg(es|ing) (naturally|organically)
-arises naturally
+arises (naturally|organically)
 flows naturally
-a natural consequence
+(a|the) natural (consequence|result)
+naturally (follows|leads to|results in)
 follows naturally
 while specific details are limited
 not widely documented
 based on available information
 maintains a low profile
-(each|every|both) perspective(s)? (has|have) merit
+(each|every|both) (perspective|side)s? (has|have) merit
+both sides of the argument
+valid points on both sides
+consider all (perspectives|stakeholders)
 a balanced approach
 nuanced (understanding|approach)
 the answer is not straightforward
 there is no simple answer
 this is a complex issue
-depends on various factors
+the issue is complex
+depends on (various|many|several) factors
+context-?dependent
 case-by-case basis
 spanning everything from
 # mode: template-filling
 in today's (fast-paced|digital|rapidly|ever-)
+in this day and age
 in the realm of
+in the world of
 in an era (where|of)
 in a world where
+throughout history
+since the dawn of
+from time immemorial
 picture this
 imagine a world
 have you ever wondered
+you (might|may) be wondering
+if you('ve| have) ever (wondered|found yourself)
+we('ve| have) all been there
+come to the right place
+you('re| are) in the right place
+ready to (dive in|get started)
+by the end of this (article|guide|post|tutorial|section)
+welcome to this
+as technology continues to (evolve|advance)
+as the world (becomes|continues)
+we live in (an era|a time)
 embark(ing)? on a journey
 gone are the days
 whether you're a
@@ -272,70 +472,117 @@ to (summarize|sum up|conclude|recap)
 all in all
 when all is said and done
 in the final analysis
-final (thoughts|word)
+on the whole
+by way of conclusion
+taking (everything|all of this) into account
+the bottom line is
+final (thoughts|word|take)
+(closing|parting) thoughts
+last word
 wrapping up
+wrap-?up
 putting it all together
+(bringing|tying) it all together
 the big picture
 moreover
 furthermore
 consequently
 subsequently
 nevertheless
+nonetheless
 conversely
+henceforth
+likewise
+accordingly
+thereby
+in the same vein
+along the same lines
+by extension
+case in point
+on a related note
+not to mention
+to that end
+with (that|this) in mind
+building on (this|that)
+equally (important|crucial|significant)
+better yet
+to top it off
+that('s| is) not all
 what's more
 that is to say
 firstly, secondly
 firstly
 secondly
 thirdly
-the (first|second|third) (takeaway|lesson|reason|thing to note)
+(fourthly|fifthly)
+the (first|second|third) (takeaway|lesson|reason|thing to note|key|point|challenge|benefit|advantage|step is)
 below you'll find
-here's (a breakdown|an overview|everything you need|what you need to know)
+here's (a breakdown|an overview|a summary|everything you need|what you need to know)
 the following sections
-this guide will walk you through
+the following (guide|tutorial|walkthrough) will
+this (guide|article|post|tutorial) will (walk you through|help you)
 what (you'll learn|we'll cover|to expect)
+what we('re| are) building
+here('s| is) what you('ll| will)? get
 deep dive
 under the hood
 demystifying
-why (it|this) matters
+why (it|this) (matters|exists)
+the inner workings
 a closer look
 the ultimate guide
 everything you need to know
 mastering [a-z]
-the (magic|future|art) of
-(three|four|five) (pillars|principles|tenets|cornerstones|levers|key)
-here are the (three|four|five)
-there are (three|four|five) (reasons|ways|things)
-at its (core|heart)
+the (magic|future|art|power|science) of
+why choose
+(two|three|four|five|six|seven) (key |main |core |guiding )?(pillars|principles|tenets|cornerstones|levers|imperatives|archetypes|personas)
+(here|below) are the (two|three|four|five|six|seven)
+there are (two|three|four|five|six|seven) (key |main )?(reasons|ways|things|factors|steps|types|categories|benefits|lessons|takeaways)
+break(s)? down into (two|three|four|five)
+nine times out of ten
+at its (core|heart|simplest|most basic)
+at their (core|heart)
+in the real world
 the key here is
-let's (unpack|break this down|dive in|explore|take a closer look)
+the (point|idea|insight|important thing) here is
+let('s| me| us) (unpack|break (this|it) down|dive in|dive into|dig into|walk (you )?through|examine|explore|take a closer look)
 let me explain
 this is where [^.]{0,40} comes in
+that('s| is) where [a-z][^.]{0,40} comes in
+understanding [a-z ]{1,40}(helps|enables|allows) you
 this matters because
+this (distinction|difference|framing|choice|detail|nuance) matters
 key takeaway
-quick (recap|overview)
+main takeaways?
+quick (recap|overview|summary)
 to recap
+to put (it plainly|this in perspective)
 in other words
 simply put
 put simply
+put differently
 to put it (another way|simply)
 said differently
+to state (it|this) plainly
+what (this|that) means is
 in plain english
-in simpler terms
+in (plain|plainer|simple|simpler) terms
 ask yourself
 the (litmus|acid) test
+the test( is)?:
+a good test:
 the question to ask
 think about it
-despite (its|these) (challenges|limitations)
+despite (its|these|the|this) (challenges?|limitations?|drawbacks?|obstacles?|hurdles?|setbacks?)
+despite facing
 while challenges remain
-challenges notwithstanding
+(challenges|obstacles|limitations) notwithstanding
 is not without its challenges
 faces several challenges
 continues to (thrive|evolve|shape)
 poised for growth
 the future looks bright
 exciting times
-one thing is certain
 what remains clear
 remains to be seen
 positions it as
@@ -346,32 +593,48 @@ step in the right direction
 \[insert
 insert [a-z]+ here
 # mode: process-leakage
-i hope this (helps|was helpful)
+i hope (this|that) (helps|was|is|clears|answers|sheds|gives|makes|proves)
+i hope you (find|found)
+hopefully this
 feel free to (ask|reach out)
 don't hesitate to
 let me know if you
+if you have any (questions|concerns|further)
+if anything is unclear
 happy to help
 i'd be happy to
-happy coding
+happy (coding|learning|building|exploring)
+good luck (with|on) your
 best of luck
-great question
-excellent question
+you('ve| have) got this
+i('m| am) here (to help|if you)
+enjoy the journey
+(great|excellent|fantastic|wonderful) question
+that('s| is) a (great|excellent|wonderful|fantastic) (question|point|idea)
 i'm glad you asked
 absolutely!
 certainly!
 of course!
+without a doubt
 you're absolutely right
 you make an excellent point
 i couldn't agree more
 i assure you
+to be (perfectly|completely|totally|brutally) honest
+in all honesty
+quite (honestly|frankly)
+if i('m| am) being (honest|frank)
+my honest (take|opinion)
+the honest (truth|answer)
 let me think step by step
 breaking this down
 here's my thought process
 working through this logically
 to approach this systematically
-as (mentioned|noted|discussed) (above|earlier)
-as previously mentioned
-as we (saw|'ll see)
+as (mentioned|noted|discussed|stated|outlined|described|referenced|covered|shown|explained) (above|earlier|before)
+as previously (mentioned|noted|discussed|stated|described)
+as we (saw|noted|discussed|explored|covered)
+as we'll (see|explore|discuss|cover)
 recall that
 as i (mentioned|said)
 now also handles
@@ -394,3 +657,19 @@ typed forward
 persistence contract
 hangs off
 fails (closed|open)
+# mode: broad-triage
+# human-triage-only: single common words, so most hits are legitimate and a
+# hit is a question, not a finding. cannot and never: would plain "not" or
+# "does not" state the fact? If yes, rewrite. gate: a literal release or
+# feature gate stays, gating as jargon flavor goes. actually: delete it and
+# reread, keep it only when it corrects a stated expectation. land and ship:
+# figurative merge/release senses take the plain verb (merged, released),
+# literal senses stay. sits: "sits above the cache" hides plain "is above" or
+# "runs above", so name the relation instead of seating the component.
+cannot
+(^|[^A-Za-z])never($|[^A-Za-z])
+(^|[^A-Za-z])gat(e|es|ed|ing)($|[^A-Za-z])
+(^|[^A-Za-z])actually($|[^A-Za-z])
+(^|[^A-Za-z])land(s|ed)($|[^A-Za-z])
+(^|[^A-Za-z])ship(s|ped|ping)?($|[^A-Za-z])
+(^|[^A-Za-z])sit(s|ting)($|[^A-Za-z])

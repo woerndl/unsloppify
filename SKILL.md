@@ -2,7 +2,7 @@
 name: unsloppify
 description: Remove AI writing tells from any generated text. Six failure-mode tests with ban lists, context rules, and an audit pipeline with a deterministic phrase scanner. Use when drafting or reviewing prose, documentation, PR descriptions, commit messages, release notes, reports, or code comments, and when asked to de-slop, humanize, or clean up text.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # unsloppify
@@ -32,7 +32,10 @@ Auditing an existing document:
 1. Run scripts/scan.sh on the document (or rg -i -f references/phrases.txt).
    This finds the literal tells at zero reasoning cost. The scanner catches
    phrase-level tells only. Structural tells (banner comments, value echoes,
-   bold-first formatting) need your read.
+   bold-first formatting) need your read. The list ends in a broad-triage
+   group (bare cannot, never, gate, actually, land, ship, sits, arrows) where
+   most hits are legitimate. Those hits are questions to answer per instance,
+   not findings to report.
 2. Read the document's structure once: headings, openings, endings. Flag
    repeated shapes, repeated metaphors, template beats.
 3. Read the text in sections. Apply the six tests per section. Long documents
@@ -58,7 +61,7 @@ the user's requested voice beats domain register beats any anti-slop rule.
 ### 1. Importance inflation
 Pull: models pad to sound authoritative, so asserted weight stands in for shown weight.
 Test: delete the rating word. If the meaning survives, the word was decoration.
-Banned: crucial, essential, vital, paramount, transformative, cannot be overstated, more important than ever, plays a key role, stands as a testament, paving the way. Escape: a dependency you name in the same sentence.
+Banned: crucial, essential, vital, paramount, transformative, cannot be overstated, more important than ever, plays a key role, stands as a testament, paving the way, dramatic absolutes (cannot, never, always) where plain "not" states the fact. Escape: a dependency you name in the same sentence, a literal impossibility.
 Example: "The cache plays a crucial role in overall system performance." -> "The cache cuts read latency by 40%."
 Infer: any word that rates the thing instead of describing it.
 

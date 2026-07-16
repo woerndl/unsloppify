@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 - 2026-07-16
+
+Catch dramatic absolutes.
+
+- `references/phrases.txt`: scanner patterns for dramatic "cannot", "never", and "always" constructions (cannot afford to, simply cannot, can't go wrong, there is no other way, there can be no doubt, never be the same, cannot be understated, stakes and crossroads variants), drawn from mastra's AbsoluteAssertions and UrgencyInflation lists.
+- `references/phrases.txt`: a broad-triage group surfaces bare `cannot`, `never`, `gate`, `actually`, `land`, `ship`, and `sits`, with the rule that most hits are legitimate and each takes a per-instance test named in the group comment.
+- `references/phrases.txt`: the list grows from 380 to 649 patterns via a full mastra ai-tells inventory, covering figurative verbs (lands silently, falls short, holds water, casts doubt, lends credence), affirmative formulas, anthropomorphic justification, hedges, narrative pivots, opening and closing cliches, transitions, filler, vague attributions, and vocabulary tells (leverage, robust, pivotal). Capitalization-dependent mastra rules stay in the model pass because the scanner matches case-insensitively.
+- `references/patterns.md`: the Absolute overreach entry names the bare-absolute class, "cannot"/"never"/"always" where plain "not" states the fact, and notes it needs the model pass.
+- `SKILL.md`: mode 1 bans dramatic absolutes, with a literal impossibility as the escape.
+- `tests/cases/16-docs-dramatic-absolutes.md`: case covering both the scanner constructions and the bare form.
+
 ## 1.0.0 - 2026-07-16
 
 Restructure into two tiers.
