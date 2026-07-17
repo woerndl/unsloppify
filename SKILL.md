@@ -1,8 +1,8 @@
 ---
 name: unsloppify
-description: Remove AI writing tells from any generated text. Six failure-mode tests with ban lists, context rules, and an audit pipeline with a deterministic phrase scanner. Use when drafting or reviewing prose, documentation, PR descriptions, commit messages, release notes, reports, or code comments, and when asked to de-slop, humanize, or clean up text.
+description: Remove AI writing tells from text. Use when a text artifact is the deliverable or a major part of one, such as documentation, PR or commit text, release notes, reports, marketing copy, code comments, or when asked to de-slop, humanize, or clean up text. Not for chat replies, status updates, or completion summaries around a non-text task.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # unsloppify
@@ -11,6 +11,15 @@ Slop is text that performs instead of informs. The fix is never decoration.
 State the plain version. This applies to any draft regardless of author,
 whether a person or a model wrote it. Judge the writing on its own terms, not
 by who produced it.
+
+## When to load
+
+Load this skill when a text artifact is the deliverable or a major part of
+one: a document, PR or commit text, release notes, a report, marketing copy,
+a substantial set of code comments. Words produced around other work do not
+qualify: chat replies, status updates, tool commentary, completion summaries.
+Those follow the writing baseline. If the skill is loaded and the task does
+not qualify, skip the procedure and continue the task.
 
 ## Procedure
 

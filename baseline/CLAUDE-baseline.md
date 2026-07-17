@@ -1,4 +1,4 @@
-<!-- unsloppify baseline v1.0. Full skill and newer versions: github.com/woerndl/unsloppify -->
+<!-- unsloppify baseline v1.1. Full skill and newer versions: github.com/woerndl/unsloppify -->
 ## Writing baseline (all generated text: prose, docs, PR and commit text, code comments)
 Write plainly, the boring phrasing wins. Say what is, not what it is not.
 State each idea once. Cut any word whose removal changes nothing. Concrete
@@ -31,4 +31,7 @@ phrase does the job:
 - vague attributions, bare fault labels without the named mechanism, invented
   labels
 
-For text others will read, run the unsloppify skill.
+Run the unsloppify skill when a text artifact is the deliverable (docs,
+report, PR or commit text, release notes, marketing copy, code comments).
+Chat replies, status updates, and completion summaries follow this baseline,
+not the skill.

@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.2.0 - 2026-07-17
+
+Narrow the trigger to text deliverables. A Codex session loaded the skill for
+a file-download task because its chat commentary counted as "text others will
+read".
+
+- `SKILL.md`: the description states when to load (text artifact is the
+  deliverable or a major part of one) and when not to (chat replies, status
+  updates, completion summaries around a non-text task). New "When to load"
+  section with the same rule and an exit for a skill loaded in error.
+- `baseline/CLAUDE-baseline.md` (v1.1): the closing line names the qualifying
+  artifacts and routes conversational text to the baseline instead of the
+  skill.
+
 ## 1.1.0 - 2026-07-16
 
 Catch dramatic absolutes.
